@@ -7,6 +7,6 @@ public record class GameDto(
     decimal Price,
     DateOnly ReleaseDate)
 {   
-    // transformando o preço em String o currency pt-br
+    // transformando o preço em String e o currency pt-br
     public string  PriceDisplay => Price == 0 ? "Gratuito" : Price.ToString("C");
 }

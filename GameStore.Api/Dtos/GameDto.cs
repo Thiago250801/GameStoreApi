@@ -8,5 +8,5 @@ public record class GameDto(
     DateOnly ReleaseDate)
 {   
     // transformando o preço em String o currency pt-br
-    public string  PriceDisplay => Price.ToString("C");
+    public string  PriceDisplay => Price == 0 ? "Gratuito" : Price.ToString("C");
 }
